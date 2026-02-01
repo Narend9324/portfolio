@@ -9,6 +9,8 @@ import { Footer } from '@/app/components/layout/Footer';
 import { SectionHeading } from '@/app/components/ui/SectionHeading';
 import { TechBadge } from '@/app/components/ui/TechBadge';
 
+export const dynamic = 'force-dynamic';
+
 export default function BlogPage() {
     const containerVariants = {
         hidden: { opacity: 0 },

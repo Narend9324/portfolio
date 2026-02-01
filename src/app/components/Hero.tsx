@@ -29,7 +29,7 @@ export default function Hero() {
           </p>
         </div>
         <p className="italic font-medium text-sm text-gray-500">
-          "I don’t just build apps—I create ecosystems that empower people."
+          &ldquo;I don&apos;t just build apps—I create ecosystems that empower people.&rdquo;
         </p>
       </div>
 

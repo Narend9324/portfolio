@@ -106,7 +106,7 @@ export const Contact: React.FC = () => {
                         className="text-center pt-8"
                     >
                         <p className="text-gray-600 dark:text-gray-400 mb-6">
-                            I'm always interested in hearing about new projects and opportunities.
+                            I&apos;m always interested in hearing about new projects and opportunities.
                         </p>
                         <Button
                             variant="primary"

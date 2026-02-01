@@ -46,7 +46,7 @@ export const Stack: React.FC = () => {
                     viewport={{ once: true, margin: '-100px' }}
                     className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
                 >
-                    {stackCategories.map((category, index) => (
+                    {stackCategories.map((category) => (
                         <motion.div
                             key={category.category}
                             variants={itemVariants}
