@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { stackCategories } from '@/app/lib/data';
 import { SectionHeading } from '../ui/SectionHeading';
 import { TechBadge } from '../ui/TechBadge';
+import { DiagonalLines, GradientOrb } from '../ui/DecorativeElements';
 
 export const Stack: React.FC = () => {
     const containerVariants = {
@@ -27,8 +28,12 @@ export const Stack: React.FC = () => {
     };
 
     return (
-        <section id="stack" className="px-4 py-20 sm:px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto">
+        <section id="stack" className="relative px-4 py-20 sm:px-6 lg:px-8 overflow-hidden">
+            {/* Decorative Elements */}
+            <DiagonalLines direction="right" className="opacity-25" />
+            <GradientOrb color="pink" size="md" className="top-20 -right-24" />
+
+            <div className="relative max-w-6xl mx-auto">
                 <SectionHeading
                     title="Tech Stack"
                     subtitle="Technologies and tools I work with"

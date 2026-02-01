@@ -6,6 +6,7 @@ import { projects } from '@/app/lib/data';
 import { SectionHeading } from '../ui/SectionHeading';
 import { ExpandableCard } from '../ui/ExpandableCard';
 import { TechBadge } from '../ui/TechBadge';
+import { DotPattern, GradientOrb } from '../ui/DecorativeElements';
 
 export const Projects: React.FC = () => {
     const containerVariants = {
@@ -28,8 +29,12 @@ export const Projects: React.FC = () => {
     };
 
     return (
-        <section id="projects" className="px-4 py-20 sm:px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto">
+        <section id="projects" className="relative px-4 py-20 sm:px-6 lg:px-8 overflow-hidden">
+            {/* Decorative Elements */}
+            <DotPattern className="opacity-40" />
+            <GradientOrb color="blue" size="lg" className="top-10 -right-32" />
+
+            <div className="relative max-w-6xl mx-auto">
                 <SectionHeading
                     title="Projects"
                     subtitle="A collection of my recent work and side projects"

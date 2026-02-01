@@ -2,8 +2,10 @@
 
 /* Custom CSS Variables */
 :root {
-  --color-primary: 37 99 235; /* blue-600 */
-  --color-secondary: 107 114 128; /* gray-500 */
+  --color-primary: 37 99 235;
+  /* blue-600 */
+  --color-secondary: 107 114 128;
+  /* gray-500 */
 }
 
 /* Smooth scrolling */
@@ -17,29 +19,35 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(243 244 246); /* gray-100 */
+  background: rgb(243 244 246);
+  /* gray-100 */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(209 213 219); /* gray-300 */
+  background: rgb(209 213 219);
+  /* gray-300 */
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(156 163 175); /* gray-400 */
+  background: rgb(156 163 175);
+  /* gray-400 */
 }
 
 /* Dark mode scrollbar */
 .dark ::-webkit-scrollbar-track {
-  background: rgb(17 24 39); /* gray-900 */
+  background: rgb(17 24 39);
+  /* gray-900 */
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: rgb(55 65 81); /* gray-700 */
+  background: rgb(55 65 81);
+  /* gray-700 */
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: rgb(75 85 99); /* gray-600 */
+  background: rgb(75 85 99);
+  /* gray-600 */
 }
 
 /* Typography improvements */
@@ -47,7 +55,37 @@ body {
   @apply antialiased;
   font-feature-settings: 'cv11', 'ss01';
   font-variation-settings: 'opsz' 32;
+  position: relative;
+  background: linear-gradient(to bottom, #ffffff 0%, #f9fafb 100%);
 }
+
+/* Subtle background pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
+  }
+
+  body::before {
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+  }
+}
+
 
 /* Focus visible styles */
 *:focus-visible {

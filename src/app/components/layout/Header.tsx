@@ -65,9 +65,10 @@ export const Header: React.FC = () => {
                             <button
                                 key={item.label}
                                 onClick={() => scrollToSection(item.href, item.isExternal)}
-                                className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition-colors font-medium"
+                                className="cursor-pointer text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition-all duration-200 font-medium relative group"
                             >
                                 {item.label}
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                             </button>
                         ))}
                     </motion.div>
@@ -75,7 +76,7 @@ export const Header: React.FC = () => {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 transition-colors"
+                        className="cursor-pointer md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 transition-colors"
                         aria-label="Toggle menu"
                     >
                         <svg
@@ -117,7 +118,7 @@ export const Header: React.FC = () => {
                                     <button
                                         key={item.label}
                                         onClick={() => scrollToSection(item.href, item.isExternal)}
-                                        className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 rounded-lg transition-colors font-medium"
+                                        className="cursor-pointer block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 rounded-lg transition-colors font-medium"
                                     >
                                         {item.label}
                                     </button>

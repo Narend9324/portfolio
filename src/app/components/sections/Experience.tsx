@@ -6,6 +6,7 @@ import { experiences } from '@/app/lib/data';
 import { SectionHeading } from '../ui/SectionHeading';
 import { ExpandableCard } from '../ui/ExpandableCard';
 import { TechBadge } from '../ui/TechBadge';
+import { DiagonalLines, GradientOrb } from '../ui/DecorativeElements';
 
 export const Experience: React.FC = () => {
     const containerVariants = {
@@ -28,8 +29,12 @@ export const Experience: React.FC = () => {
     };
 
     return (
-        <section id="experience" className="px-4 py-20 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
-            <div className="max-w-6xl mx-auto">
+        <section id="experience" className="relative px-4 py-20 sm:px-6 lg:px-8 overflow-hidden">
+            {/* Decorative Elements */}
+            <DiagonalLines direction="left" className="opacity-30" />
+            <GradientOrb color="purple" size="lg" className="bottom-10 -left-32" />
+
+            <div className="relative max-w-6xl mx-auto">
                 <SectionHeading
                     title="Experience"
                     subtitle="My professional journey and key accomplishments"

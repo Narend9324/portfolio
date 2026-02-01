@@ -29,7 +29,7 @@ export const ExpandableCard: React.FC<ExpandableCardProps> = ({
         >
             <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="w-full text-left transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                className="cursor-pointer w-full text-left transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/50"
                 aria-expanded={isExpanded}
             >
                 <div className="flex items-start justify-between gap-4 p-6">
